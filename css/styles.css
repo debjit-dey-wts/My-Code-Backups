@@ -26,6 +26,22 @@ body{
     align-items: center;
 }
 
+.container{
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
 .box{
     height: 100px;
     aspect-ratio: 1/1;
