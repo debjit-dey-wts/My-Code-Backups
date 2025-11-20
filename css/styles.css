@@ -150,6 +150,7 @@ body{
     height: 100%;
     border-radius: 20px;
     backface-visibility: hidden;
+    overflow: hidden;
 }
 .frontFace{
     background-color: var(--secondary-color);
