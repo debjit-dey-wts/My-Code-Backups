@@ -37,13 +37,13 @@ body{
 
 .cardBox{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     width: 100%;
 }
 
 .box{
-    height: 100px;
+    width: 100%;
     aspect-ratio: 1/1;
     background-color: var(--secondary-color);
     border-radius: 10px;
