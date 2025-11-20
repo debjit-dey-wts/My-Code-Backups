@@ -30,7 +30,7 @@ body{
     height: 100px;
     aspect-ratio: 1/1;
     background-color: var(--secondary-color);
-    border-radius: 15px;
+    border-radius: 10px;
     position: relative;
     display: flex;
     justify-content: center;
