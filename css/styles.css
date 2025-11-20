@@ -1,0 +1,84 @@
+/* - - - - - - - - - - - - - - - - - - - - - -  */
+/* - - - - - - - Global CSS */
+/* - - - - - - - - - - - - - - - - - - - - - -  */
+
+:root{
+    --primary-color: #0e2136;
+    --secondary-color: #142d4a;
+    --gradient-color-1: #00c3ff;
+    --gradient-color-2: #4d0199;
+    --gradient-color-3: #6300c6;
+}
+
+
+
+/* - - - - - - - - - - - - - - - - - - - - - -  */
+/* - - - - - - - Main CSS */
+/* - - - - - - - - - - - - - - - - - - - - - -  */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 100px;
+    aspect-ratio: 1/1;
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.box:hover::before,
+.box:hover::after{
+    opacity: 1;
+    transition: all 0.4s ease-in;
+}
+
+@property --deg{
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 0deg;
+}
+
+.box::before,
+.box::after{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: conic-gradient(
+        from var(--deg) at center,
+        var(--gradient-color-1),
+        var(--gradient-color-2),
+        var(--gradient-color-3),
+        var(--gradient-color-1)
+    );
+    border-radius: inherit;
+    z-index: -2;
+    padding: 1.5px;
+    animation: rotate 4s linear infinite;
+    opacity: 0;
+}
+.box::after{
+    filter: blur(20px);
+}
+
+@keyframes rotate{
+    0%{
+        --deg: 0deg;
+    }
+    100%{
+        --deg: 360deg;
+    }
+}
+
